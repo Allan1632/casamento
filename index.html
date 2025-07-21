@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Site com Pagamento</title>
+</head>
+<body style="font-family:sans-serif; text-align:center; padding:40px;">
+  <h1>Compre meu produto</h1>
+  <p>Produto incrível por apenas R$ 10,00</p>
+
+  <button onclick="copiarPix()">Copiar Pix</button>
+  <p id="confirmacao" style="color:green;"></p>
+
+  <script>
+    function copiarPix() {
+      const codigoPix = '00020126580014BR.GOV.BCB.PIX0136seuemail@seudominio.com5204000053039865802BR5913Seu Nome6009SAO PAULO62070503***6304ABCD';
+      navigator.clipboard.writeText(codigoPix).then(() => {
+        document.getElementById('confirmacao').innerText = "Código Pix copiado!";
+      });
+    }
+  </script>
+
+  <p>Ou pague com:</p>
+  <a href="https://pag.ae/seulinkdopagamento" target="_blank">Mercado Pago</a>
+</body>
+</html>
